@@ -1,5 +1,5 @@
 import { Router } from 'express'
-// import SearchController from './controllers/SearchController'
+import OngController from './controllers/OngController'
 
 const routes = new Router()
 
@@ -7,6 +7,6 @@ routes.get('/', (req, res) => {
   return res.json({ message: 'Backend Semana OmniStack 11' })
 })
 
-// routes.get('/search', SearchController.index)
+routes.post('/ongs', OngController.store)
 
 export default routes
